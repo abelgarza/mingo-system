@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+.gitmodules
+
+# Environment & Data
+.env
+.venvs/
+data/
+logs/
+tmp/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+.tox/
+
+# Node caching
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+
+# Local IDEs
+.vscode/
+.idea/
+.DS_Store
+*.code-workspace
