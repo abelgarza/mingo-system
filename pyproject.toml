@@ -5,10 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mingo-workspace"
 version = "0.1.0"
-dependencies = ["python-dotenv>=1.2.2"]
-
-[project.scripts]
-git-protocol = "src.git_protocol.cli:main"
+dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -64,12 +64,13 @@ def scaffold_workspace(target_dir: str, repo_name: str | None = None) -> None:
         get_template("vscode_settings.tmpl").replace("{repo_name}", name),
     )
 
-    src_dir = root / "src"
-    src_dir.mkdir(exist_ok=True)
+    src_pkg_dir = root / "src" / name
+    src_pkg_dir.mkdir(parents=True, exist_ok=True)
+    _write_if_missing(src_pkg_dir / "__init__.py", f'"""\n{name} — package initialization.\n"""\n')
     _install_pre_commit_hook(root)
 
     print(f"Workspace protocol applied to: {root.resolve()}")
-    print("  .gitignore, pyproject.toml, requirements.txt, .vscode/settings.json, src/__init__.py, .git/hooks/pre-commit")
+    print(f"  .gitignore, pyproject.toml, requirements.txt, .vscode/settings.json, src/{name}/__init__.py, .git/hooks/pre-commit")
 
 
 def _install_pre_commit_hook(root: Path) -> None:
