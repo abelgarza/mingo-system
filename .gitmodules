@@ -4,3 +4,7 @@
 [submodule "src/ollama"]
 	path = src/ollama
 	url = https://github.com/ollama/ollama.git
+
+[submodule "src/vpn"]
+	path = src/vpn
+	url = ./src/vpn
