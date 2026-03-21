@@ -24,6 +24,13 @@ def add_submodule(repo_url: str, path: str | None = None) -> None:
 
     if result.returncode == 0:
         print(f"Submodule '{name}' added at '{submodule_path}'.")
+        
+        # Scrub authentication token from the tracked .gitmodules
+        import re
+        clean_url = re.sub(r"https://[^@]+@", "https://", authenticated_url)
+        run(["git", "config", "--file", ".gitmodules", f"submodule.{submodule_path}.url", clean_url])
+        run(["git", "add", ".gitmodules"])
+        
         commit_if_dirty(f"chore: add submodule {name}")
     else:
         print(f"Failed to add submodule (exit code: {result.returncode})")

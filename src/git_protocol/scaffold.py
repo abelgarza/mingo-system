@@ -66,10 +66,21 @@ def scaffold_workspace(target_dir: str, repo_name: str | None = None) -> None:
 
     src_dir = root / "src"
     src_dir.mkdir(exist_ok=True)
-    _write_if_missing(src_dir / "__init__.py", "")
+    _install_pre_commit_hook(root)
 
     print(f"Workspace protocol applied to: {root.resolve()}")
-    print("  .gitignore, pyproject.toml, requirements.txt, .vscode/settings.json, src/__init__.py")
+    print("  .gitignore, pyproject.toml, requirements.txt, .vscode/settings.json, src/__init__.py, .git/hooks/pre-commit")
+
+
+def _install_pre_commit_hook(root: Path) -> None:
+    """Install the secret-scanning pre-commit hook if the git repo exists."""
+    hooks_dir = root / ".git" / "hooks"
+    if hooks_dir.exists():
+        hook_path = hooks_dir / "pre-commit"
+        _write_if_missing(hook_path, get_template("pre-commit.tmpl"))
+        # Ensure it is executable
+        if hook_path.exists():
+            os.chmod(hook_path, 0o755)
 
 
 def _write_if_missing(path: Path, content: str) -> None:
