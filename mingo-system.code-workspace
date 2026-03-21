@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.defaultInterpreterPath": "/home/abelgarza/dev/.venvs/mingo-workspace/bin/python3",
+		"python.defaultInterpreterPath": "/home/abelg/dev/mingo-system/.venvs/mingo-workspace/bin/python3",
 		"python-envs.workspaceSearchPaths": [
 			"./.venvs/*"
 		],

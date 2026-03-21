@@ -1,0 +1,6 @@
+[submodule "src/gemini-cli"]
+	path = src/gemini-cli
+	url = https://github.com/google-gemini/gemini-cli.git
+[submodule "src/ollama"]
+	path = src/ollama
+	url = https://github.com/ollama/ollama.git

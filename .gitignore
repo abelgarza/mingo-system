@@ -1,12 +1,37 @@
+# Environment & Data
 .env
-
-
-.venvs/
 data/
 logs/
 tmp/
-bin/
-/.vscode
 
-*.egg-info
-*.pyc
+# IDE / OS
+/.vscode/
+.idea/
+.DS_Store
+
+# Node / TypeScript (src/gemini-cli)
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+
+# Python (src/git_protocol)
+.venvs/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+.tox/
+
+# Go / Local Inference (src/ollama)
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
