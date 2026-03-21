@@ -1,0 +1,12 @@
+.env
+
+
+.venvs/
+data/
+logs/
+tmp/
+bin/
+/.vscode
+
+*.egg-info
+*.pyc

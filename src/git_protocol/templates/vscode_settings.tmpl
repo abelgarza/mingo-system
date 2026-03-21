@@ -1,0 +1,24 @@
+{
+    "python.defaultInterpreterPath": ".venvs/{repo_name}/bin/python3",
+    "python-envs.workspaceSearchPaths": ["./.venvs/*"],
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true
+    },
+    "files.watcherExclude": {
+        "**/__pycache__/**": true,
+        "**/.pytest_cache/**": true,
+        "**/.mypy_cache/**": true,
+        "**/.venvs/**": true,
+        "**/.git/objects/**": true
+    },
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.venvs": true
+    },
+    "git.autofetch": false
+}
