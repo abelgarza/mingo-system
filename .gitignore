@@ -8,6 +8,7 @@ tmp/
 /.vscode/
 .idea/
 .DS_Store
+*.code-workspace
 
 # Node / TypeScript (src/gemini-cli)
 node_modules/
