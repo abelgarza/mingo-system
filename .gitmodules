@@ -8,9 +8,9 @@
 	path = src/ollama
 	url = https://github.com/ollama/ollama.git
 
-# git-protocol
-[submodule "src/git_protocol"]
-	path = src/git_protocol
+# mingo-manager
+[submodule "src/mingo-manager"]
+	path = src/mingo-manager
 	url = https://github.com/abelgarza/git-protocol.git
 
 # [TEC] vpn
