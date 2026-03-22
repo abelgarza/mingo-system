@@ -17,3 +17,4 @@
 [submodule "src/flux_scraper"]
 	path = src/flux_scraper
 	url = /home/abelg/.gemini/tmp/flux-scraper-repo
+	branch = main
