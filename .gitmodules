@@ -14,3 +14,6 @@
 [submodule "src/vpn"]
 	path = src/vpn
 	url = https://github.com/abelgarza/vpn.git
+[submodule "src/flux_scraper"]
+	path = src/flux_scraper
+	url = /home/abelg/.gemini/tmp/flux-scraper-repo
