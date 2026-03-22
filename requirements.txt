@@ -1,2 +1,2 @@
 -e .
--e src/git_protocol
+-e src/my-manager

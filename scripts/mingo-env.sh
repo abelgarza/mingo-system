@@ -3,7 +3,7 @@
 
 export MINGO_ROOT="$HOME/dev/mingo-system"
 
-# Load dynamic aliases from mingo-manager
+# Load dynamic aliases from my-manager
 if [ -f "$MINGO_ROOT/mingo" ]; then
     eval "$($MINGO_ROOT/mingo alias --show)"
 else

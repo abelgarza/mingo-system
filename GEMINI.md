@@ -6,7 +6,7 @@ This document establishes the foundational architectural principles, coding stan
 `mingo-system` is a polyglot **Composite Workspace** designed as an AI-powered development toolkit. It integrates three primary domains:
 
 1.  **AI Orchestration (`src/gemini-cli`):** The primary user interface and "brain" of the system. Built with TypeScript/Node.js, it handles agentic workflows and tool execution.
-2.  **Workspace Protocol (`src/git_protocol`):** A Python-based management layer that enforces the workspace structure, handles submodules, and automates repository maintenance.
+2.  **Workspace Protocol (`src/my-manager`):** A Python-based management layer that enforces the workspace structure, handles submodules, and automates repository maintenance.
 3.  **Local Inference (`src/ollama`):** A Go-based backend providing local LLM serving capabilities, acting as a provider for the AI orchestrator.
 
 ## Code Organization & Policies
@@ -20,7 +20,7 @@ This document establishes the foundational architectural principles, coding stan
 
 ### Where to Place New Features
 - **AI Logic & CLI Tools:** All agent-related features, new tools for the CLI, or UI/UX improvements must reside in `src/gemini-cli/`.
-- **Git & Repository Lifecycle:** Any logic related to how the workspace is structured, how submodules are managed, or custom Git automation must reside in `src/git_protocol/`.
+- **Git & Repository Lifecycle:** Any logic related to how the workspace is structured, how submodules are managed, or custom Git automation must reside in `src/my-manager/`.
 - **Model Serving & LLM Backend:** Enhancements to the local inference engine or model management go into `src/ollama/`.
 
 ### Directory Structure Integrity
@@ -34,7 +34,7 @@ This document establishes the foundational architectural principles, coding stan
 - **Language:** All code (symbols, variables, classes), comments, documentation, and commit messages must be in **English**.
 - **Naming:** Use descriptive, intentional names. Favor readability over brevity.
 
-### Python Standards (`src/git_protocol`)
+### Python Standards (`src/my-manager`)
 - **PEP 8:** Mandatory adherence to PEP 8 style guidelines.
 - **Typing:** Use Python type hints (`typing` module) for all function signatures and class members.
 - **Documentation:** Use Google-style docstrings for all public classes and methods.

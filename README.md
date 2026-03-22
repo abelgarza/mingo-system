@@ -43,7 +43,7 @@ Development in this system follows a structured path:
 - **Research:** Exploratory scripts and ideas.
 - **Integration:** Formalizing the idea into `src/` following the [GEMINI.md](./GEMINI.md) mandates.
 - **Orchestration:** Adding CLI commands or protocol automations to manage the new feature via `./mingo`.
-- **Dockerization:** Using `mingo-manager` to generate Dockerfiles and prepare the module for containerized deployment.
+- **Dockerization:** Using `my-manager` to generate Dockerfiles and prepare the module for containerized deployment.
 
 ## Navigation
 

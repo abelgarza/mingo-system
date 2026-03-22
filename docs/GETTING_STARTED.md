@@ -4,7 +4,7 @@ A polyglot composite workspace serving as a powerful, AI-driven development tool
 
 Mingo System is architected across three core microservices:
 1. **AI Orchestrator (`src/gemini-cli`)**: The Node/TypeScript-based command-line interface and logic brain.
-2. **Workspace Protocol (`src/git_protocol`)**: The Python-based automation and repository management layer.
+2. **Workspace Protocol (`src/my-manager`)**: The Python-based automation and repository management layer.
 3. **Local Inference (`src/ollama`)**: The Go-based backend for serving and querying LLMs locally.
 
 ## Getting Started
@@ -38,7 +38,7 @@ This provides several key helpers:
 - `mingo_venv`: Quickly activate the project's Python virtual environment.
 - `mingo_init`: Explicitly load the `.env` secrets into your current bash session.
 - `gemini_cli`: Launch the AI orchestrator from any directory.
-- `git_protocol`: Invoke the workspace management tool.
+- `my-manager`: Invoke the workspace management tool.
 
 ### 3. Launch the System
 To spin up all necessary background daemons (like Ollama) and prepare the system for execution:
@@ -51,7 +51,7 @@ To spin up all necessary background daemons (like Ollama) and prepare the system
 Maintain the modularity of the system by following these structural mandates:
 
 - **AI Logic & CLI Tools**: New agent-related features or CLI improvements go into `src/gemini-cli/`.
-- **Git & Repository Lifecycle**: Logic for workspace structure or Git automation goes into `src/git_protocol/`.
+- **Git & Repository Lifecycle**: Logic for workspace structure or Git automation goes into `src/my-manager/`.
 - **Model Serving**: Enhancements to the local inference engine go into `src/ollama/`.
 
 ### 5. Teardown
