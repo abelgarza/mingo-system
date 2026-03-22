@@ -6,9 +6,10 @@ cd "$MINGO_ROOT"
 
 echo "[INFO] Starting Mingo System Services..."
 
-# Ensure environment is sourced
+# Ensure environment is sourced and venv exists
 if [ -f "scripts/mingo-env.sh" ]; then
     source scripts/mingo-env.sh
+    source scripts/ensure-venv.sh
     mingo_init > /dev/null
 fi
 
@@ -36,4 +37,4 @@ if [ -d "src/ollama" ]; then
 fi
 
 echo "[SUCCESS] All background services started."
-echo "You can now use 'mingo_venv' and 'gemini_cli' aliases. To stop the services, run ./scripts/stop.sh"
+echo "To stop the services, run ./scripts/stop.sh"

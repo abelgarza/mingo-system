@@ -21,11 +21,10 @@ fi
 
 # 2. Setup Python Virtual Environment
 echo "[INFO] Setting up Python Virtual Environment..."
-if [ ! -d .venvs/mingo-workspace ]; then
-    python3 -m venv .venvs/mingo-workspace
-    echo "[OK] Created new virtual environment at .venvs/mingo-workspace"
-else
-    echo "[OK] Virtual environment already exists."
+source scripts/ensure-venv.sh
+if [ $? -ne 0 ]; then
+    echo "[ERROR] Failed to ensure virtual environment."
+    exit 1
 fi
 
 # 3. Install Python Dependencies
