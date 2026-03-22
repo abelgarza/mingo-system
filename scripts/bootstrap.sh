@@ -50,7 +50,8 @@ if [ -d "src/gemini-cli" ]; then
     cd src/gemini-cli
     if command -v npm >/dev/null 2>&1; then
         npm install
-        if [ -f "npm run build" ]; then
+        # Check if we should build (if there's a build script in package.json)
+        if grep -q '"build":' package.json; then
             npm run build
         fi
         echo "[OK] Node dependencies installed and built."
