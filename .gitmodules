@@ -1,24 +1,38 @@
+# gemini-cli
 [submodule "src/gemini-cli"]
 	path = src/gemini-cli
 	url = https://github.com/google-gemini/gemini-cli.git
+
+# ollama
 [submodule "src/ollama"]
 	path = src/ollama
 	url = https://github.com/ollama/ollama.git
-[submodule "src/vpn"]
-	path = src/vpn
-	url = https://github.com/abelgarza/vpn.git
+
+# git-protocol
 [submodule "src/git_protocol"]
 	path = src/git_protocol
 	url = https://github.com/abelgarza/git-protocol.git
+
+# [TEC] vpn
 [submodule "src/vpn"]
 	path = src/vpn
 	url = https://github.com/abelgarza/vpn.git
+# [TEC] InteligenciaComercial
 [submodule "src/InteligenciaComercial"]
 	path = src/InteligenciaComercial
 	url = https://github.com/Sorteos-Tec-Inteligencia-de-Datos/InteligenciaComercial.git
+
+# Google Cloud
 [submodule "src/mingo-gcp"]
 	path = src/mingo-gcp
 	url = https://github.com/abelgarza/mingo-gcp.git
+
+# Scrapper
 [submodule "src/flux_scraper"]
 	path = src/flux_scraper
 	url = https://github.com/abelgarza/flux_scraper.git
+
+# heretic
+[submodule "src/heretic"]
+	path = src/heretic
+	url = https://github.com/abelgarza/heretic.git
