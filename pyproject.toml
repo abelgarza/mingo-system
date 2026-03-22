@@ -5,7 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mingo-workspace"
 version = "0.1.0"
-dependencies = []
+dependencies = [
+    "python-dotenv",
+    "pandas",
+    "beautifulsoup4",
+    "openpyxl",
+    "playwright"
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
