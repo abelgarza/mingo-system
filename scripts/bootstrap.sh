@@ -66,7 +66,7 @@ for d in src/*/ ; do
     dir_name=$(basename "$d")
     
     # Skip legacy or external inspiration modules that might break the build
-    if [ "$dir_name" = "InteligenciaComercial" ] || [ "$dir_name" = "flux_scraper" ]; then
+    if [ "$dir_name" = "flux_scraper" ]; then
         echo "       Skipping $dir_name (legacy/external module)..."
         continue
     fi

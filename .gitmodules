@@ -17,10 +17,7 @@
 [submodule "src/vpn"]
 	path = src/vpn
 	url = https://github.com/abelgarza/vpn.git
-# [TEC] InteligenciaComercial
-[submodule "src/InteligenciaComercial"]
-	path = src/InteligenciaComercial
-	url = https://github.com/Sorteos-Tec-Inteligencia-de-Datos/InteligenciaComercial.git
+
 
 # Google Cloud
 [submodule "src/mingo-gcp"]
