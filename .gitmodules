@@ -5,9 +5,12 @@
 	path = src/ollama
 	url = https://github.com/ollama/ollama.git
 
-[submodule "src/vpn"]
-	path = src/vpn
-	url = ./src/vpn
+# [submodule "src/vpn"]
+# 	path = src/vpn
+# 	url = ./src/vpn
 [submodule "src/git_protocol"]
 	path = src/git_protocol
 	url = https://github.com/abelgarza/git-protocol.git
+[submodule "src/vpn"]
+	path = src/vpn
+	url = https://github.com/abelgarza/vpn.git
