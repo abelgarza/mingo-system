@@ -11,6 +11,13 @@ This document establishes the foundational architectural principles, coding stan
 
 ## Code Organization & Policies
 
+### Environment & Initialization
+- **System Bootstrapping:** All initialization, dependency resolution, and lifecycle management scripts must reside in `scripts/`.
+  - `bootstrap.sh`: Automates dependency installation (`pip`, `npm`, `venv`) and scaffolds `.env`.
+  - `start.sh` & `stop.sh`: Unified service loop for background daemons like `ollama`.
+  - `mingo-env.sh`: Interactive shell exports and aliases (lazy-loaded by the host `~/.bashrc`).
+- **Secrets Management:** Project-specific secrets must strictly reside in `mingo-system/.env` to avoid polluting the host's global environment. Do not push `.env` to version control.
+
 ### Where to Place New Features
 - **AI Logic & CLI Tools:** All agent-related features, new tools for the CLI, or UI/UX improvements must reside in `src/gemini-cli/`.
 - **Git & Repository Lifecycle:** Any logic related to how the workspace is structured, how submodules are managed, or custom Git automation must reside in `src/git_protocol/`.
