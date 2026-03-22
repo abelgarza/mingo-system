@@ -1,46 +1,54 @@
 # Mingo System
 
-A polyglot composite workspace serving as a powerful, AI-driven development toolkit. 
+> **"Personal-First, Public-Ready: A developer's laboratory for evolving ideas into production-grade systems."**
 
-Mingo System is architected across three core microservices:
-1. **AI Orchestrator (`src/gemini-cli`)**: The Node/TypeScript-based command-line interface and logic brain.
-2. **Workspace Protocol (`src/git_protocol`)**: The Python-based automation and repository management layer.
-3. **Local Inference (`src/ollama`)**: The Go-based backend for serving and querying LLMs locally.
+Mingo System is not just a toolset; it is a **Polyglot Orchestration Framework** designed to manage personal projects with the rigor of a professional ecosystem. It provides the infrastructure to experiment rapidly across different languages and domains, ensuring that any successful module can be easily decoupled and published as a standalone repository.
 
-## Getting Started
+## The Philosophy
 
-### 1. Bootstrap the Environment
-We use a unified initialization script to isolate dependencies, configure Python virtual environments uniquely for this workspace, and generate the required secrets structure.
+The core of Mingo System is built on three pillars:
 
-```bash
-./scripts/bootstrap.sh
+1.  **Modular Evolution:** Start as a private script, evolve into a system module, and finally decouple into a public repository.
+2.  **Polyglot Harmony:** Seamlessly integrate TypeScript (CLI), Python (Git/Automation), and Go (Inference) without cross-contamination.
+3.  **AI-First Developer Experience:** Leveraging LLMs not just for code generation, but as active orchestrators of the development lifecycle.
+
+## Systemic Administration
+
+Mingo System manages complexity through a tiered orchestration model. Instead of focusing on *where* files are, we focus on *how* they interact:
+
+```mermaid
+graph TD
+    User([User]) <--> CLI[Gemini CLI / Brain]
+    CLI <--> GP[Git Protocol / Management]
+    CLI <--> AI[Ollama / Local Inference]
+    
+    subgraph "Workspace Lifecycle"
+        GP --> |Enforce| Rules[GEMINI.md Mandates]
+        GP --> |Scaffold| New[New Features/Modules]
+        GP --> |Automate| Git[Repository Health]
+    end
+    
+    subgraph "Execution Layer"
+        AI --> |Intelligence| CLI
+        CLI --> |Task Execution| Scripts[scripts/ ecosystem]
+    end
+    
+    Rules -.-> |Governance| CLI
 ```
 
-> **Note:** Open the generated `.env` file and fill in your API keys (e.g., `GEMINI_ML`).
+## Governance & Scaling
 
-### 2. Launch the System
-To spin up all necessary background daemons (like Ollama) and prepare the system for execution:
+Development in this system follows a structured path:
+- **Research:** Exploratory scripts and ideas.
+- **Integration:** Formalizing the idea into `src/` following the [GEMINI.md](./GEMINI.md) mandates.
+- **Orchestration:** Adding CLI commands or protocol automations to manage the new feature.
+- **Decoupling:** Using `git_protocol` logic to prepare a module for standalone release.
 
-```bash
-./scripts/start.sh
-```
+## Navigation
 
-### 3. Usage
-You can drop into the isolated Mingo virtual environment and invoke the Orchestrator via the host-registered aliases (ensure your `~/.bashrc` sources `scripts/mingo-env.sh`):
+- **[GEMINI.md](./GEMINI.md):** The "Source of Truth" for architectural mandates, coding standards, and project policies.
+- **[docs/GETTING_STARTED.md](./docs/GETTING_STARTED.md):** Technical instructions for bootstrapping, starting services, and environment setup.
+- **[src/](./src/):** The core modules of the system (AI Orchestrator, Workspace Protocol, and Inference Engine).
 
-```bash
-# Activate the mingo Python virtualenv explicitly
-mingo_venv
-
-# Run the gemini-cli directly
-gemini_cli
-```
-
-### 4. Teardown
-To gracefully stop all background services (reading from PID files):
-```bash
-./scripts/stop.sh
-```
-
-## Documentation & Architecture
-Please refer to `GEMINI.md` for architectural mandates and coding standards.
+---
+*Mingo System: Orchestrating the future of personal engineering.*
