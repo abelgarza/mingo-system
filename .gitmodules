@@ -19,3 +19,6 @@
 [submodule "src/mingo-gcp"]
 	path = src/mingo-gcp
 	url = https://github.com/abelgarza/mingo-gcp.git
+[submodule "src/flux_scraper"]
+	path = src/flux_scraper
+	url = https://github.com/abelgarza/flux_scraper.git
