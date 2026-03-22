@@ -8,10 +8,10 @@
 	path = src/ollama
 	url = https://github.com/ollama/ollama.git
 
-# mingo-manager
-[submodule "src/mingo-manager"]
-	path = src/mingo-manager
-	url = https://github.com/abelgarza/git-protocol.git
+# my-manager
+[submodule "src/my-manager"]
+	path = src/my-manager
+	url = https://github.com/abelgarza/my-manager.git
 
 # [TEC] vpn
 [submodule "src/vpn"]
