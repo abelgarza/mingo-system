@@ -35,4 +35,4 @@ bin/
 *.so
 *.dylib
 *.test
-*.out
+*.outsrc/oracle-tec/
