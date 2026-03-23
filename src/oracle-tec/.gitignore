@@ -1,0 +1,38 @@
+# Environment & Data
+.env
+data/
+logs/
+tmp/
+
+# IDE / OS
+/.vscode/
+.idea/
+.DS_Store
+*.code-workspace
+
+# Node / TypeScript (src/gemini-cli)
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+
+# Python (src/git_protocol)
+.venvs/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+.tox/
+
+# Go / Local Inference (src/ollama)
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
