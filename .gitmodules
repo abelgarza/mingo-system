@@ -35,6 +35,3 @@
 	url = https://github.com/abelgarza/heretic.git
 
 # oracle-tec
-[submodule "src/oracle-tec"]
-	path = src/oracle-tec
-	url = https://github.com/Sorteos-Tec-Inteligencia-de-Datos/oracle-tec.git
